@@ -641,20 +641,15 @@ button { font-family: inherit; }
 }
 
 .cs-feature-img {
-  position: relative;
   border-radius: 16px;
   overflow: hidden;
-  width: 100%;
-  aspect-ratio: 1076 / 712;
 }
 
 .cs-feature-img img {
-  position: absolute;
-  left: -19.87%;
-  top: -9.42%;
-  width: 132.09%;
-  height: 114.36%;
-  max-width: none;
+  width: 100%;
+  height: auto;
+  display: block;
+  transform: scale(1.05);
 }
 
 .cs-meta {
