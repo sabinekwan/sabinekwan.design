@@ -426,6 +426,7 @@ button { font-family: inherit; }
 
 .case-studies {
   padding: 96px 32px;
+  scroll-margin-top: 171px;
 }
 
 /* ── Card grid ── */
@@ -1032,6 +1033,7 @@ button { font-family: inherit; }
 
   .case-studies {
     padding: 120px 44px;
+    scroll-margin-top: 121px;
   }
 
   .cards-grid {

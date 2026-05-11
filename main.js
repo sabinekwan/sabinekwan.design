@@ -31,6 +31,7 @@
 
         <nav class="desktop-nav" aria-label="Main navigation">
           <a href="about.html" class="nav-link"${isAbout ? ' aria-current="page"' : ''}>About</a>
+          <a href="index.html#case-studies" class="nav-link">Work</a>
           <a
             href="https://drive.google.com/file/d/1NmzHvv1UU78Ubu3FrCxYTFcnHChqmB3J/view?usp=sharing"
             class="nav-link"
@@ -91,6 +92,7 @@
       </div>
       <nav class="mobile-overlay-nav" aria-label="Mobile navigation">
         <a href="about.html" class="mobile-nav-link"${isAbout ? ' aria-current="page"' : ''}>About</a>
+        <a href="index.html#case-studies" class="mobile-nav-link">Work</a>
         <a
           href="https://drive.google.com/file/d/1NmzHvv1UU78Ubu3FrCxYTFcnHChqmB3J/view?usp=sharing"
           class="mobile-nav-link"
