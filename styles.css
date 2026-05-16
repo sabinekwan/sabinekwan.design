@@ -445,8 +445,8 @@ button { font-family: inherit; }
     Col 2, Row 1 → Streamlining (text only, right side)
 */
 .card-case-study  { grid-column: 1; grid-row: 1; }
-.card-research    { grid-column: 1; grid-row: 2; }
-.card-streamlining { grid-column: 2; grid-row: 1; }
+.card-cs2         { grid-column: 2; grid-row: 1; }
+.card-streamlining { grid-column: 1; grid-row: 2; }
 
 
 /* ── Card base styles ── */
@@ -530,7 +530,6 @@ button { font-family: inherit; }
 
 /* ── Coming-soon cards: visually dimmed, non-interactive ── */
 
-.card-research,
 .card-streamlining {
   opacity: 0.55;
   cursor: default;
@@ -538,7 +537,8 @@ button { font-family: inherit; }
 
 /* ── Case study card hover state ── */
 
-.card-case-study {
+.card-case-study,
+.card-cs2 {
   position: relative;
   cursor: pointer;
 }
@@ -557,7 +557,9 @@ button { font-family: inherit; }
 }
 
 .card-case-study:hover .card-hover-overlay,
-.card-case-study:focus-within .card-hover-overlay {
+.card-case-study:focus-within .card-hover-overlay,
+.card-cs2:hover .card-hover-overlay,
+.card-cs2:focus-within .card-hover-overlay {
   opacity: 1;
   pointer-events: auto;
 }
@@ -741,6 +743,18 @@ button { font-family: inherit; }
   width: 100%;
   border-radius: 16px;
   display: block;
+}
+
+.cs-before-after {
+  padding-top: 3rem;
+}
+
+.cs-before-after figcaption {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  color: rgba(0, 6, 52, 0.7);
+  text-align: center;
+  padding-top: 1.5rem;
 }
 
 .cs-process-list {
@@ -1042,7 +1056,7 @@ button { font-family: inherit; }
 
   /* Re-stack in natural reading order */
   .card-case-study   { grid-column: 1; grid-row: 1; }
-  .card-research     { grid-column: 1; grid-row: 2; }
+  .card-cs2          { grid-column: 1; grid-row: 2; }
   .card-streamlining { grid-column: 1; grid-row: 3; }
 
   .card-title {
