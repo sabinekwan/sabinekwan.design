@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do — Sabine Kwan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    .cs-process-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      padding-top: 8px;
+    }
+    .cs-process-card {
+      background: rgba(0, 0, 0, 0.05);
+      border-radius: 16px;
+      padding: 40px 32px;
+      text-align: center;
+    }
+    .cs-process-card-icon {
+      width: 70px;
+      height: auto;
+      margin: 0 auto 20px;
+      display: block;
+    }
+    .cs-process-card-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: #000634;
+      margin-bottom: 12px;
+      line-height: 1.2;
+    }
+    .cs-process-card-body {
+      font-size: 16px;
+      color: rgba(0, 6, 52, 0.7);
+      line-height: 1.5;
+    }
+    .cs-showcase-list {
+      display: flex;
+      flex-direction: column;
+      gap: 64px;
+      padding-top: 16px;
+    }
+    .cs-showcase-item {
+      display: flex;
+      align-items: center;
+      gap: 64px;
+    }
+    .cs-showcase-item:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+    .cs-showcase-img {
+      width: 280px;
+      flex-shrink: 0;
+      border-radius: 16px;
+      display: block;
+    }
+    .cs-showcase-title {
+      font-size: 24px;
+      font-weight: 700;
+      color: #000634;
+      margin-bottom: 12px;
+    }
+    .cs-showcase-desc {
+      font-size: 18px;
+      color: rgba(0, 6, 52, 0.7);
+      line-height: 1.5;
+    }
+    .cs-content-img {
+      width: 100%;
+      border-radius: 12px;
+      display: block;
+      margin-top: 32px;
+    }
+    @media (max-width: 767px) {
+      .cs-process-cards { grid-template-columns: 1fr; }
+      .cs-showcase-item,
+      .cs-showcase-item:nth-child(even) { flex-direction: column; }
+      .cs-showcase-img { width: 100%; max-width: 280px; margin: 0 auto; }
+    }
+  </style>
+</head>
+<body>
+
+  <main id="main-content">
+
+    <section class="cs-hero" aria-labelledby="cs-title">
+      <a href="../index.html" class="cs-back-link">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+        Work
+      </a>
+      <h1 class="cs-title" id="cs-title">To-Do: A Long-Distance Relationship Solution for Couples</h1>
+    </section>
+
+    <section class="cs-feature" aria-label="To-Do app overview">
+      <div class="cs-feature-img">
+        <img src="../past_uploads/2doportfolioheader.png" alt="To-Do app screens overview">
+      </div>
+    </section>
+
+    <section class="cs-meta" aria-label="Case study details">
+      <div class="cs-meta-inner">
+        <div class="cs-meta-item">
+          <h2 class="cs-meta-label">Role</h2>
+          <p class="cs-meta-value">UX Researcher</p>
+        </div>
+        <div class="cs-meta-item">
+          <h2 class="cs-meta-label">Timeline</h2>
+          <p class="cs-meta-value">24 Hours</p>
+        </div>
+        <div class="cs-meta-item">
+          <h2 class="cs-meta-label">Team</h2>
+          <div class="cs-meta-value">
+            <p>Sage Young — Team Leader, UI/UX Designer, UX Researcher</p>
+            <p>Sabine Kwan — Competitor Research, UI/UX Designer, UX Researcher, Brainstorming, User Flow Mapping</p>
+            <p>Sam Quiambao — UI/UX Designer, Survey Analysis</p>
+            <p>Sasipornkarn S — UI/UX Designer, Competitor Analysis, Style Guide</p>
+          </div>
+        </div>
+        <div class="cs-meta-item">
+          <h2 class="cs-meta-label">Skills</h2>
+          <div class="cs-meta-value">
+            <p>Prioritization Matrix</p>
+            <p>Competitor Research</p>
+            <p>POV Statement</p>
+            <p>User Flow Mapping</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="cs-content">
+
+      <section class="cs-section" aria-labelledby="cs-process">
+        <h2 class="cs-section-heading" id="cs-process">Process</h2>
+        <div class="cs-process-cards">
+          <div class="cs-process-card">
+            <img class="cs-process-card-icon" src="../past_uploads/brainstormicon.png" alt="">
+            <p class="cs-process-card-title">Brainstorming</p>
+            <p class="cs-process-card-body">Brainstorming and testing out concepts based upon the problem statement.</p>
+          </div>
+          <div class="cs-process-card">
+            <img class="cs-process-card-icon" src="../past_uploads/lightbulb.png" alt="">
+            <p class="cs-process-card-title">Ideating</p>
+            <p class="cs-process-card-body">Taking brainstormed ideas and ideating them into a low-fidelity prototype. Researching competitors to define our unique selling point and deciding upon our in-app features.</p>
+          </div>
+          <div class="cs-process-card">
+            <img class="cs-process-card-icon" src="../past_uploads/prototypingfillin.png" alt="">
+            <p class="cs-process-card-title">Prototyping</p>
+            <p class="cs-process-card-body">Prototyping our medium-fidelity prototype based upon the features we had decided to implement.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="cs-section" aria-labelledby="cs-overview">
+        <h2 class="cs-section-heading" id="cs-overview">Overview</h2>
+        <div class="cs-section-body">
+          <p>In a world where couples are constantly entering into long-distance relationships, <strong>how can we bring them closer together?</strong></p>
+          <p>It is already difficult enough to be in a long-distance relationship. How might we make it easier for long distance couples to stay connected — to maintain that spark that keeps the relationship going?</p>
+        </div>
+      </section>
+
+      <section class="cs-section" aria-labelledby="cs-persona">
+        <h2 class="cs-section-heading" id="cs-persona">Meet Fang</h2>
+        <div class="cs-section-body">
+          <p>Fang is a full-time college student who also works part time as a front-desk agent, looking to re-ignite the spark with her significant other. She wants to engage more with her partner, but is having difficulty due to her busy schedule, feeling disconnected because of not knowing about his interests since going long distance, and a lack of interesting things to do together after a year apart.</p>
+        </div>
+        <img class="cs-content-img" src="../past_uploads/fangcasestudy.png" alt="User persona: Fang">
+      </section>
+
+      <section class="cs-section" aria-labelledby="cs-problem">
+        <h2 class="cs-section-heading" id="cs-problem">Problem Statement</h2>
+        <div class="cs-section-body">
+          <p>Fang has a lot on her plate with schoolwork and her part-time job. Her partner lives and works in another part of the world, and she needs to find a way to connect with him beyond just talking quickly about their days.</p>
+          <p><strong>How might we help Fang find interesting activities to experience with her partner?</strong></p>
+        </div>
+      </section>
+
+      <section class="cs-section" aria-labelledby="cs-step1">
+        <h2 class="cs-section-heading" id="cs-step1">Step 1: Brainstorming</h2>
+        <div class="cs-section-body">
+          <p>In order to determine what Fang needs, we conducted secondary research on what tools people her age used to stay in touch. According to a 2018 paper by Soto Herara, LDR users most frequently communicated via: Instant Messaging, Telephone, Online Video Chat, Online Audio Chat, and Social Media.</p>
+          <p>Cross-correlating with our team's primary research, couples did not find these technologies sufficient for a sense of "closeness." What couples needed was a shared space, inside jokes, and time spent together — not just a medium for contact.</p>
+        </div>
+        <img class="cs-content-img" src="../past_uploads/screenshot20210408at22.png" alt="Secondary research on long-distance relationship communication tools">
+      </section>
+
+      <section class="cs-section" aria-labelledby="cs-persona-painpoints">
+        <h2 class="cs-section-heading" id="cs-persona-painpoints">Persona Creation: Identifying Pain Points</h2>
+        <div class="cs-section-body">
+          <p>Based upon our secondary research, we defined Fang's various pain points and fleshed out her motivations, goals, and interests. After forming multiple POV Statements, we determined that Fang's main priority was coordinating activities with her partner — accounting for the drastic time difference and the stress of daily life.</p>
+        </div>
+        <img class="cs-content-img" src="../past_uploads/todoidentifyingpainpoints1.png" alt="Pain points identification for To-Do persona">
+        <img class="cs-content-img" src="../past_uploads/todoidentifyingpainpoints2.png" alt="Pain points identification continued">
+        <img class="cs-content-img" src="../past_uploads/povstatement.png" alt="POV statement for Fang">
+      </section>
+
+      <section class="cs-section" aria-labelledby="cs-step2">
+        <h2 class="cs-section-heading" id="cs-step2">Step 2: Ideating</h2>
+        <div class="cs-section-body">
+          <p><strong>Competitor Research:</strong> A competitor matrix was established comparing in-app features across existing relationship apps. We found a saturation of writing-based journaling apps, but barely any focused on date planning — particularly long-distance date planning. We decided to pursue that gap.</p>
+          <p><strong>Prioritization Matrix:</strong> Based upon our proposed prototype direction, we used a prioritization matrix to decide on the most crucial features, focusing on high-value actions like picking and selecting activities to do together.</p>
+        </div>
+        <img class="cs-content-img" src="../past_uploads/todocompetitorresearch.png" alt="Competitor research matrix for long-distance relationship apps">
+        <img class="cs-content-img" src="../past_uploads/todocompetitorresearch2.png" alt="Competitor research findings continued">
+        <img class="cs-content-img" src="../past_uploads/2doprioritizationmatrix.png" alt="Prioritization matrix for To-Do features">
+      </section>
+
+      <section class="cs-section" aria-labelledby="cs-step3">
+        <h2 class="cs-section-heading" id="cs-step3">Step 3: Prototyping</h2>
+        <div class="cs-section-body">
+          <p>Based upon the features outlined in our prioritization matrix, we designed our medium-fidelity prototype. The app had 3 main features: <strong>Room Joining, Picking Activities, and Adding Activities to a To-Do List.</strong></p>
+        </div>
+      </section>
+
+      <section class="cs-section" aria-labelledby="cs-features">
+        <h2 class="cs-section-heading" id="cs-features">Prototype Features</h2>
+        <div class="cs-showcase-list">
+          <div class="cs-showcase-item">
+            <img class="cs-showcase-img" src="../past_uploads/2doroomjoining.gif" alt="Room joining feature demo">
+            <div>
+              <p class="cs-showcase-title">Room Joining</p>
+              <p class="cs-showcase-desc">To do activities together, a couple joins a room. Rooms can be created on the spot, or someone can join via a Room ID.</p>
+            </div>
+          </div>
+          <div class="cs-showcase-item">
+            <img class="cs-showcase-img" src="../past_uploads/2doactivitymatching.gif" alt="Picking activities feature demo">
+            <div>
+              <p class="cs-showcase-title">Picking Activities</p>
+              <p class="cs-showcase-desc">Users can browse through various activities in the app, select which ones they want to do, and save them to a To-Do List.</p>
+            </div>
+          </div>
+          <div class="cs-showcase-item">
+            <img class="cs-showcase-img" src="../past_uploads/2dolist2x.png" alt="To-Do list feature screenshot">
+            <div>
+              <p class="cs-showcase-title">To-Do List</p>
+              <p class="cs-showcase-desc">Activities are saved to a To-Do List for later. Activities are ranked by level of difficulty, cost, and time duration.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cs-section" aria-labelledby="cs-outcomes">
+        <h2 class="cs-section-heading" id="cs-outcomes">Outcomes &amp; Results</h2>
+        <div class="cs-section-body">
+          <p>Our team successfully completed a medium-fidelity prototype within 24 hours across different timezones.</p>
+          <p>There were difficulties deciding on the initial app concept — we originally planned something similar to an "activity roulette" option, but the concern was that conversation would feel too forced. It would have been better to test our initial paper-prototype in person with couples to identify these flaws sooner.</p>
+          <p>In the end, we focused on serving as an activity generator for couples — a simpler and more natural solution. Overall, this was an interesting project to work on, and I enjoyed collaborating with the team.</p>
+        </div>
+      </section>
+
+    </div>
+
+  </main>
+
+  <script src="../main.js"></script>
+</body>
+</html>

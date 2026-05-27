@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Urban Guide — Sabine Kwan</title>
+  <meta name="description" content="Redesigning The Urban Guide, a cultural exploration game, through gamification and artifact systems.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    /* ── Process overview cards ── */
+    .cs-process-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .cs-process-card {
+      background: rgba(0, 0, 0, 0.05);
+      border-radius: 16px;
+      padding: 40px 32px;
+      text-align: center;
+    }
+    .cs-process-card-icon {
+      width: 56px;
+      height: 56px;
+      background: rgba(0, 215, 176, 0.12);
+      border-radius: 14px;
+      margin: 0 auto 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .cs-process-card-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: #000634;
+      margin-bottom: 10px;
+      line-height: 1.25;
+    }
+    .cs-process-card-body {
+      font-size: 16px;
+      font-weight: 400;
+      color: rgba(0, 6, 52, 0.65);
+      line-height: 1.55;
+    }
+
+    /* ── Inline content images ── */
+    .cs-content-img {
+      width: 100%;
+      border-radius: 12px;
+      display: block;
+      margin-top: 32px;
+    }
+
+    /* ── Feature showcase: alternating phone + text ── */
+    .cs-showcase-list {
+      display: flex;
+      flex-direction: column;
+      gap: 72px;
+    }
+    .cs-showcase-item {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      align-items: center;
+      gap: 64px;
+    }
+    .cs-showcase-item:nth-child(even) {
+      grid-template-columns: 1fr 280px;
+    }
+    .cs-showcase-item:nth-child(even) .cs-showcase-media { order: 2; }
+    .cs-showcase-item:nth-child(even) .cs-showcase-text  { order: 1; }
+    .cs-showcase-img {
+      width: 100%;
+      border-radius: 16px;
+      display: block;
+    }
+    .cs-showcase-title {
+      font-size: 24px;
+      font-weight: 700;
+      color: #000634;
+      margin-bottom: 12px;
+    }
+    .cs-showcase-desc {
+      font-size: 18px;
+      font-weight: 400;
+      color: rgba(0, 6, 52, 0.7);
+      line-height: 1.55;
+    }
+
+    /* ── Future steps list ── */
+    .cs-future-list {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      list-style: none;
+      padding: 0;
+    }
+    .cs-future-item {
+      display: grid;
+      grid-template-columns: 48px 1fr;
+      gap: 0 20px;
+      align-items: baseline;
+    }
+    .cs-future-number {
+      font-size: 24px;
+      font-weight: 700;
+      color: #00d7b0;
+      line-height: 1;
+    }
+    .cs-future-title {
+      font-size: 24px;
+      font-weight: 700;
+      color: #000634;
+      margin-bottom: 4px;
+    }
+    .cs-future-desc {
+      font-size: 24px;
+      font-weight: 400;
+      color: #000634;
+      line-height: normal;
+      grid-column: 2;
+    }
+
+    /* ── Responsive ── */
+    @media (min-width: 768px) and (max-width: 1199px) {
+      .cs-showcase-item,
+      .cs-showcase-item:nth-child(even) {
+        grid-template-columns: 200px 1fr;
+        gap: 40px;
+      }
+    }
+    @media (max-width: 767px) {
+      .cs-process-cards { grid-template-columns: 1fr; }
+      .cs-showcase-item,
+      .cs-showcase-item:nth-child(even) {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+      .cs-showcase-item:nth-child(even) .cs-showcase-media,
+      .cs-showcase-item:nth-child(even) .cs-showcase-text { order: unset; }
+      .cs-showcase-img { max-width: 280px; margin: 0 auto; }
+      .cs-future-item { grid-template-columns: 1fr; }
+      .cs-future-number { display: none; }
+      .cs-future-desc { grid-column: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <main id="main-content">
+
+    <!-- ===== Hero ===== -->
+    <section class="cs-hero" aria-labelledby="cs-title">
+      <a href="../index.html" class="cs-back-link" aria-label="Back to Work">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+        Work
+      </a>
+      <h1 class="cs-title" id="cs-title">The Urban Guide: Redesigning a Cultural Exploration Game Through Gamification</h1>
+    </section>
+
+    <!-- ===== Feature image ===== -->
+    <section class="cs-feature" aria-label="The Urban Guide app screens">
+      <div class="cs-feature-img">
+        <img src="../past_uploads/tugportfolioabout.jpg" alt="The Urban Guide redesigned app screens showing maps, badges, and artifacts">
+      </div>
+    </section>
+
+    <!-- ===== Meta ===== -->
+    <section class="cs-meta" aria-label="Project details">
+      <div class="cs-meta-inner">
+        <div class="cs-meta-item">
+          <h2 class="cs-meta-label">Role</h2>
+          <div class="cs-meta-value">
+            <p>Scrum Master</p>
+            <p>Project Manager</p>
+            <p>UI/UX Designer</p>
+            <p>UX Researcher</p>
+          </div>
+        </div>
+        <div class="cs-meta-item">
+          <h2 class="cs-meta-label">Timeline</h2>
+          <p class="cs-meta-value">12 Weeks</p>
+        </div>
+        <div class="cs-meta-item">
+          <h2 class="cs-meta-label">Team</h2>
+          <div class="cs-meta-value">
+            <p>Ololade Alli Alli — Competitor Research, UI/UX Designer, UX Researcher</p>
+            <p>Reina Rodgers — Education Specialist, Brainwriting Moderator, Style Guide</p>
+            <p>Sabine Kwan — Scrum Master, Project Manager, UI/UX Designer, UX Researcher</p>
+          </div>
+        </div>
+        <div class="cs-meta-item">
+          <h2 class="cs-meta-label">Skills</h2>
+          <div class="cs-meta-value">
+            <p>UX Research &amp; Interviewing</p>
+            <p>Low &amp; Medium Fidelity Design</p>
+            <p>User Testing &amp; Analysis</p>
+            <p>Gamification Design</p>
+            <p>Artifact System Design</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Content body ===== -->
+    <div class="cs-content">
+
+      <section class="cs-section" aria-labelledby="cs-process-heading">
+        <h2 class="cs-section-heading" id="cs-process-heading">Process</h2>
+        <div class="cs-process-cards" role="list">
+          <article class="cs-process-card" role="listitem">
+            <div class="cs-process-card-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00d7b0" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="11" cy="11" r="7"/>
+                <line x1="16.5" y1="16.5" x2="21" y2="21"/>
+              </svg>
+            </div>
+            <p class="cs-process-card-title">Testing Concepts &amp; Understanding the TUG</p>
+            <p class="cs-process-card-body">Exploring the client's vision, testing a cryptocurrency direction, and discovering through user testing why a different approach was needed.</p>
+          </article>
+          <article class="cs-process-card" role="listitem">
+            <div class="cs-process-card-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00d7b0" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+                <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+              </svg>
+            </div>
+            <p class="cs-process-card-title">Creating Gamification Concepts</p>
+            <p class="cs-process-card-body">Using the Octalysis Framework to design a gamification system — in-game economy, badges, artifacts, and secret maps.</p>
+          </article>
+          <article class="cs-process-card" role="listitem">
+            <div class="cs-process-card-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00d7b0" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+                <rect x="7" y="2" width="10" height="20" rx="2"/>
+                <line x1="10" y1="7" x2="14" y2="7"/>
+                <line x1="10" y1="11" x2="14" y2="11"/>
+                <line x1="10" y1="15" x2="12" y2="15"/>
+              </svg>
+            </div>
+            <p class="cs-process-card-title">Prototype Creation</p>
+            <p class="cs-process-card-body">Building a medium-fidelity prototype around the gamification concepts, artifact system, and redesigned user flow.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="cs-section" aria-labelledby="cs-overview-heading">
+        <h2 class="cs-section-heading" id="cs-overview-heading">Overview</h2>
+        <div class="cs-section-body">
+          <p>The Urban Guide is an educational cultural app that enables users to explore countries by walking to real-world locations and answering cultural questions. Our team was brought in to redesign the game with gamification features that would make it more engaging and enjoyable.</p>
+          <p>The project spanned 12 weeks — though the first 4–5 weeks involved significant client negotiation, as the original brief asked for cryptocurrency and NFT integration. User testing quickly showed this direction wasn't working, and we pivoted to focus on what made the game unique: the exploration and learning experience itself.</p>
+        </div>
+      </section>
+
+      <section class="cs-section" aria-labelledby="cs-problem-heading">
+        <h2 class="cs-section-heading" id="cs-problem-heading">Problem Statement</h2>
+        <div class="cs-section-body">
+          <p><strong>How might we make the TUG more entertaining and engaging so that users have a fun experience and learn more about other cultures while playing?</strong></p>
+        </div>
+      </section>
+
+      <section class="cs-section" aria-labelledby="cs-step1-heading">
+        <h2 class="cs-section-heading" id="cs-step1-heading">Step 1: Testing Concepts &amp; Understanding The Urban Guide</h2>
+        <div class="cs-section-body">
+          <p>The client initially wanted a cryptocurrency and NFT direction — a Cryptowallet, NFT Exchange, Leaderboards, and a Museum &amp; Artifacts section. After the first round of user testing, it was clear this was not the right path. We convinced the client to redirect focus to what was core: making the game itself more playable and enjoyable.</p>
+          <p>Below: the original cryptocurrency user flow, low-fidelity sketches, and first round of user testing notes and summary.</p>
+        </div>
+        <img class="cs-content-img" src="../past_uploads/tugcryptocurrencyuserflow.png" alt="Original cryptocurrency user flow diagram for The Urban Guide">
+        <img class="cs-content-img" src="../past_uploads/tugcryptocurrencylowfidelityuserflow.png" alt="Low-fidelity sketches of the cryptocurrency concept">
+        <img class="cs-content-img" src="../past_uploads/tugcryptocurrencygeneralobservationsfindings.png" alt="General observations and findings from the first round of user testing">
+        <img class="cs-content-img" src="../past_uploads/tugcryptocurrencysummaryofresults.png" alt="Summary of first user testing results indicating cryptocurrency was not the right direction">
+      </section>
+
+      <section class="cs-section" aria-labelledby="cs-step2-heading">
+        <h2 class="cs-section-heading" id="cs-step2-heading">Step 2: Creating Gamification Concepts</h2>
+        <div class="cs-section-body">
+          <p>I applied Yu-Kai Chou's Octalysis Framework, which identifies 8 core drives that make games engaging. Based on this, we selected 4 focus areas for the redesign:</p>
+          <ol class="cs-outcomes-list" aria-label="Gamification focus areas">
+            <li>An <strong>in-game economy</strong> to give actions and rewards meaning</li>
+            <li>A <strong>badge &amp; artifact system</strong> that rewards players for achievements and exploration</li>
+            <li>A <strong>user dashboard</strong> for tracking progress and collections</li>
+            <li>A <strong>secret map</strong> mechanic to add surprise and discovery</li>
+          </ol>
+          <p>I also created a points system corresponding to each badge type, to give the economy structure and balance.</p>
+        </div>
+        <img class="cs-content-img" src="../past_uploads/tugoctalysisframework.png" alt="Yu-Kai Chou's Octalysis Framework annotated with TUG gamification concepts">
+        <img class="cs-content-img" src="../past_uploads/tugproperingameeconomy.png" alt="In-game economy design for The Urban Guide">
+        <img class="cs-content-img" src="../past_uploads/tugunlockablescollectibles.png" alt="Unlockables and collectibles system design">
+        <img class="cs-content-img" src="../past_uploads/tugpointsystem.png" alt="Points system corresponding to each badge type">
+        <img class="cs-content-img" src="../past_uploads/tugnewuserflow.png" alt="Redesigned user flow after the gamification pivot">
+      </section>
+
+      <section class="cs-section" aria-labelledby="cs-step3-heading">
+        <h2 class="cs-section-heading" id="cs-step3-heading">Step 3: Prototype Creation</h2>
+        <div class="cs-section-body">
+          <p>After designing the new user flow and deciding on freemium vs. premium features, we focused the medium-fidelity prototype on six core experiences: <strong>Map Selection, Gameboard, Answer Questions, Badges, Artifacts, Profile,</strong> and <strong>Secret Maps.</strong></p>
+        </div>
+      </section>
+
+    </div><!-- /.cs-content -->
+
+    <!-- ===== Prototype Features ===== -->
+    <div class="cs-content">
+      <section class="cs-section" aria-labelledby="cs-features-heading">
+        <h2 class="cs-section-heading" id="cs-features-heading">Prototype Features</h2>
+        <div class="cs-showcase-list" role="list" aria-label="Prototype feature demonstrations">
+
+          <article class="cs-showcase-item" role="listitem" aria-labelledby="feat-map-selection">
+            <div class="cs-showcase-media">
+              <img class="cs-showcase-img" src="../past_uploads/tugmapcarousel.gif" alt="Animated demo of the map selection carousel showing different country maps">
+            </div>
+            <div class="cs-showcase-text">
+              <h3 class="cs-showcase-title" id="feat-map-selection">Map Selection</h3>
+              <p class="cs-showcase-desc">Select from a variety of game maps based on country to enrich your knowledge about a particular area.</p>
+            </div>
+          </article>
+
+          <article class="cs-showcase-item" role="listitem" aria-labelledby="feat-gameboard">
+            <div class="cs-showcase-media">
+              <img class="cs-showcase-img" src="../past_uploads/tugmapscreen.png" alt="Screenshot of the gameboard showing location pin-points on a map">
+            </div>
+            <div class="cs-showcase-text">
+              <h3 class="cs-showcase-title" id="feat-gameboard">Gameboard</h3>
+              <p class="cs-showcase-desc">Complete all the location pin-points on a map to finish a gameboard and unlock new rewards.</p>
+            </div>
+          </article>
+
+          <article class="cs-showcase-item" role="listitem" aria-labelledby="feat-questions">
+            <div class="cs-showcase-media">
+              <img class="cs-showcase-img" src="../past_uploads/tugmapdecription.png" alt="Screenshot of the question screen players see at each map location">
+            </div>
+            <div class="cs-showcase-text">
+              <h3 class="cs-showcase-title" id="feat-questions">Answer Questions</h3>
+              <p class="cs-showcase-desc">Go to each location, answer cultural questions, earn badges, and build your knowledge of the world as you explore.</p>
+            </div>
+          </article>
+
+          <article class="cs-showcase-item" role="listitem" aria-labelledby="feat-badges">
+            <div class="cs-showcase-media">
+              <img class="cs-showcase-img" src="../past_uploads/tugbadges.gif" alt="Animated demo showing badges being earned and displayed in the dashboard">
+            </div>
+            <div class="cs-showcase-text">
+              <h3 class="cs-showcase-title" id="feat-badges">Badges</h3>
+              <p class="cs-showcase-desc">Earn badges for completing locations and achievements. View your full collection in your personal dashboard.</p>
+            </div>
+          </article>
+
+          <article class="cs-showcase-item" role="listitem" aria-labelledby="feat-artifacts">
+            <div class="cs-showcase-media">
+              <img class="cs-showcase-img" src="../past_uploads/tugartifacts.gif" alt="Animated demo of collecting, combining, and trading artifacts">
+            </div>
+            <div class="cs-showcase-text">
+              <h3 class="cs-showcase-title" id="feat-artifacts">Artifacts</h3>
+              <p class="cs-showcase-desc">Collect cultural artifacts throughout the game, trade with other players, combine them to create secondary artifacts, and work towards completing every set.</p>
+            </div>
+          </article>
+
+          <article class="cs-showcase-item" role="listitem" aria-labelledby="feat-profile">
+            <div class="cs-showcase-media">
+              <img class="cs-showcase-img" src="../past_uploads/tugprofile.png" alt="Screenshot of the profile screen showing achievements, badges, step count, and leaderboard rank">
+            </div>
+            <div class="cs-showcase-text">
+              <h3 class="cs-showcase-title" id="feat-profile">Profile</h3>
+              <p class="cs-showcase-desc">View all your achievements — badges collected, artifacts earned, steps counted, and your standing on the leaderboard.</p>
+            </div>
+          </article>
+
+          <article class="cs-showcase-item" role="listitem" aria-labelledby="feat-secret-maps">
+            <div class="cs-showcase-media">
+              <img class="cs-showcase-img" src="../past_uploads/tugsecretmap.png" alt="Screenshot of a secret map revealed during gameplay">
+            </div>
+            <div class="cs-showcase-text">
+              <h3 class="cs-showcase-title" id="feat-secret-maps">Secret Maps</h3>
+              <p class="cs-showcase-desc">Unlock secret maps as you play and complete them to earn exclusive unlockables and in-game rewards.</p>
+            </div>
+          </article>
+
+        </div>
+      </section>
+    </div><!-- /.cs-content -->
+
+    <div class="cs-content">
+
+      <section class="cs-section" aria-labelledby="cs-outcomes-heading">
+        <h2 class="cs-section-heading" id="cs-outcomes-heading">Outcomes &amp; Results</h2>
+        <div class="cs-section-body">
+          <p>The biggest time cost was client negotiation — managing expectations, redirecting focus from cryptocurrency to unlockables, and convincing the client to trust the design process. Once aligned, the pivot proved effective and led to a much stronger product direction.</p>
+          <p>Navigation architecture was a key lesson. More time on card-sorting and information architecture early would have saved significant rework later in the project.</p>
+        </div>
+      </section>
+
+      <section class="cs-section" aria-labelledby="cs-future-heading">
+        <h2 class="cs-section-heading" id="cs-future-heading">Future Steps</h2>
+        <ol class="cs-future-list" aria-label="Planned future features">
+          <li class="cs-future-item">
+            <span class="cs-future-number" aria-hidden="true">01</span>
+            <div>
+              <p class="cs-future-title">Trading Artifacts</p>
+              <p class="cs-future-desc">Players will be able to trade artifacts amongst other players, adding a social economy layer to the game.</p>
+            </div>
+          </li>
+          <li class="cs-future-item">
+            <span class="cs-future-number" aria-hidden="true">02</span>
+            <div>
+              <p class="cs-future-title">New Gameboard Notifications</p>
+              <p class="cs-future-desc">Alert players when a new gameboard becomes available in a new city.</p>
+            </div>
+          </li>
+          <li class="cs-future-item">
+            <span class="cs-future-number" aria-hidden="true">03</span>
+            <div>
+              <p class="cs-future-title">Custom Artifacts</p>
+              <p class="cs-future-desc">Premium users will be able to create and publish their own custom artifacts.</p>
+            </div>
+          </li>
+          <li class="cs-future-item">
+            <span class="cs-future-number" aria-hidden="true">04</span>
+            <div>
+              <p class="cs-future-title">Step Count Analysis</p>
+              <p class="cs-future-desc">A dedicated page for detailed step count analysis and activity history.</p>
+            </div>
+          </li>
+          <li class="cs-future-item">
+            <span class="cs-future-number" aria-hidden="true">05</span>
+            <div>
+              <p class="cs-future-title">Multiplayer Mode</p>
+              <p class="cs-future-desc">Premium users will be able to play alongside others from around the world in a healthy competitive environment.</p>
+            </div>
+          </li>
+          <li class="cs-future-item">
+            <span class="cs-future-number" aria-hidden="true">06</span>
+            <div>
+              <p class="cs-future-title">User-Built Gameboards</p>
+              <p class="cs-future-desc">A premium interface allowing users to design and publish their own gameboards in their own city.</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+    </div><!-- /.cs-content -->
+
+  </main>
+
+  <script src="../main.js"></script>
+</body>
+</html>

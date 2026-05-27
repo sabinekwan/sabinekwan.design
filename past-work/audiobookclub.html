@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audiobook Club — Sabine Kwan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    .cs-process-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      padding-top: 8px;
+    }
+    .cs-process-card {
+      background: rgba(0, 0, 0, 0.05);
+      border-radius: 16px;
+      padding: 40px 32px;
+      text-align: center;
+    }
+    .cs-process-card-icon {
+      width: 70px;
+      height: auto;
+      margin: 0 auto 20px;
+      display: block;
+    }
+    .cs-process-card-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: #000634;
+      margin-bottom: 12px;
+      line-height: 1.2;
+    }
+    .cs-process-card-body {
+      font-size: 16px;
+      color: rgba(0, 6, 52, 0.7);
+      line-height: 1.5;
+    }
+    .cs-showcase-list {
+      display: flex;
+      flex-direction: column;
+      gap: 64px;
+      padding-top: 16px;
+    }
+    .cs-showcase-item {
+      display: flex;
+      align-items: center;
+      gap: 64px;
+    }
+    .cs-showcase-item:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+    .cs-showcase-img {
+      width: 280px;
+      flex-shrink: 0;
+      border-radius: 16px;
+      display: block;
+    }
+    .cs-showcase-title {
+      font-size: 24px;
+      font-weight: 700;
+      color: #000634;
+      margin-bottom: 12px;
+    }
+    .cs-showcase-desc {
+      font-size: 18px;
+      color: rgba(0, 6, 52, 0.7);
+      line-height: 1.5;
+    }
+    .cs-content-img {
+      width: 100%;
+      border-radius: 12px;
+      display: block;
+      margin-top: 32px;
+    }
+    @media (max-width: 767px) {
+      .cs-process-cards { grid-template-columns: 1fr; }
+      .cs-showcase-item,
+      .cs-showcase-item:nth-child(even) { flex-direction: column; }
+      .cs-showcase-img { width: 100%; max-width: 280px; margin: 0 auto; }
+    }
+  </style>
+</head>
+<body>
+
+  <main id="main-content">
+
+    <section class="cs-hero" aria-labelledby="cs-title">
+      <a href="../index.html" class="cs-back-link">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+        Work
+      </a>
+      <h1 class="cs-title" id="cs-title">Audiobook Club: Connecting Audiobook Listeners Through Recommendations and Commentary</h1>
+    </section>
+
+    <section class="cs-feature" aria-label="Audiobook Club app overview">
+      <div class="cs-feature-img">
+        <img src="../past_uploads/audiobookclubaboutportfolio.jpg" alt="Audiobook Club app screens overview">
+      </div>
+    </section>
+
+    <section class="cs-meta" aria-label="Case study details">
+      <div class="cs-meta-inner">
+        <div class="cs-meta-item">
+          <h2 class="cs-meta-label">Role</h2>
+          <p class="cs-meta-value">Project Management, UX Research</p>
+        </div>
+        <div class="cs-meta-item">
+          <h2 class="cs-meta-label">Timeline</h2>
+          <p class="cs-meta-value">3 Months</p>
+        </div>
+        <div class="cs-meta-item">
+          <h2 class="cs-meta-label">Team</h2>
+          <div class="cs-meta-value">
+            <p>Sabine Kwan — Project Management, UX Researcher</p>
+            <p>Yiming Yang — Prototyping &amp; User Testing</p>
+            <p>Matthew Lou — Business Development &amp; Vision</p>
+          </div>
+        </div>
+        <div class="cs-meta-item">
+          <h2 class="cs-meta-label">Skills</h2>
+          <div class="cs-meta-value">
+            <p>UX Research &amp; Analysis</p>
+            <p>Survey Recruitment</p>
+            <p>Affinity Mapping &amp; Coding</p>
+            <p>Prioritization Matrix</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="cs-content">
+
+      <section class="cs-section" aria-labelledby="cs-process">
+        <h2 class="cs-section-heading" id="cs-process">Process</h2>
+        <div class="cs-process-cards">
+          <div class="cs-process-card">
+            <img class="cs-process-card-icon" src="../past_uploads/brainstormicon.png" alt="">
+            <p class="cs-process-card-title">Understanding our Persona</p>
+            <p class="cs-process-card-body">Using surveys and interviews in order to understand our persona and the direction we wished to take our app in.</p>
+          </div>
+          <div class="cs-process-card">
+            <img class="cs-process-card-icon" src="../past_uploads/nounpersona4144930.png" alt="">
+            <p class="cs-process-card-title">Crafting our Persona</p>
+            <p class="cs-process-card-body">Crafting our persona based upon user interview and survey results, sorting findings by affinity mapping and coding.</p>
+          </div>
+          <div class="cs-process-card">
+            <img class="cs-process-card-icon" src="../past_uploads/prototypingfillin.png" alt="">
+            <p class="cs-process-card-title">Prototype Creation</p>
+            <p class="cs-process-card-body">Based upon our findings, we formed a prioritization matrix to determine which features to include within the app.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="cs-section" aria-labelledby="cs-overview">
+        <h2 class="cs-section-heading" id="cs-overview">Overview</h2>
+        <div class="cs-section-body">
+          <p>In 2020, more than 71,000 audiobooks were published per year. According to goodereader.com, the audiobook industry is also set to be the fastest growing sector within the publishing world.</p>
+          <p>With audiobooks in demand, our group set out to tackle the issue of how audiobook readers retained what they listened to. What we discovered was contrary to our initial assumption and caused us to fundamentally change our problem statement.</p>
+        </div>
+        <img class="cs-content-img" src="../past_uploads/2530r0lvie5jqya1ndutmzm.jpg" alt="Audiobook listeners research overview">
+      </section>
+
+      <section class="cs-section" aria-labelledby="cs-problem">
+        <h2 class="cs-section-heading" id="cs-problem">Problem Statement</h2>
+        <div class="cs-section-body">
+          <p><strong>How might we make it easier for audiobook listeners to connect with others, as well as search for what they want to read?</strong></p>
+        </div>
+      </section>
+
+      <section class="cs-section" aria-labelledby="cs-step1">
+        <h2 class="cs-section-heading" id="cs-step1">Step 1: Understanding our Persona</h2>
+        <div class="cs-section-body">
+          <p>In order to understand our persona, I drafted out a series of survey questions and contacted individuals to schedule interviews. All survey participants and interviewees were recruited online using Reddit, Facebook, and forums such as the Librivox forums.</p>
+          <p>Questions ranged from how they first got into audiobooks, how they retained what they listened to, what features they preferred, and their listening habits. In total we received 102 survey responses &amp; 10 interviews within a week.</p>
+          <p>After sorting our findings, we used an Excel sheet to code them into clusters of tags for qualitative analysis, then represented findings visually using an affinity map. We discovered that the majority of users did not take notes at all — instead, they shared what they learned with others via word of mouth. Audiobook listeners were more likely to listen while on commute, receive recommendations through word of mouth, and were most interested in reading recommendations.</p>
+        </div>
+        <img class="cs-content-img" src="../past_uploads/surveyresultsaudiobookclub.png" alt="Survey results from audiobook club research">
+        <img class="cs-content-img" src="../past_uploads/interviewnotetakingaudiobookclub.png" alt="Interview note-taking from audiobook club research">
+        <img class="cs-content-img" src="../past_uploads/excelaudiobookclub.jpg" alt="Excel coding of audiobook club research findings">
+        <img class="cs-content-img" src="../past_uploads/affinitymappingaudiobookclub.jpg" alt="Affinity mapping results for audiobook club">
+      </section>
+
+      <section class="cs-section" aria-labelledby="cs-step2">
+        <h2 class="cs-section-heading" id="cs-step2">Step 2: Crafting our Persona</h2>
+        <div class="cs-section-body">
+          <p>Based upon our affinity mapping results, we created 2 personas — one based upon housewives (the majority of our survey respondents), and one based upon those who multitask by listening to audiobooks while doing menial tasks like administrative or data-entry work.</p>
+          <p>Based upon our personas, we then created a customer journey to better understand how our target user would interact with the app.</p>
+        </div>
+        <img class="cs-content-img" src="../past_uploads/persona1audiobookclub.png" alt="Persona 1 for audiobook club">
+        <img class="cs-content-img" src="../past_uploads/persona2audiobookclub.png" alt="Persona 2 for audiobook club">
+        <img class="cs-content-img" src="../past_uploads/customerjourneyaudiobookclub.png" alt="Customer journey map for audiobook club">
+      </section>
+
+      <section class="cs-section" aria-labelledby="cs-step3">
+        <h2 class="cs-section-heading" id="cs-step3">Step 3: Prototype Creation</h2>
+        <div class="cs-section-body">
+          <p>To decide which features to include, we used a prioritization matrix. Interestingly, we found that users wanted specific audiobook controls like a sound bookmark, narrator selection, and volume adjustment.</p>
+          <p>Given our time and scope constraints, we decided to focus on audiobook recommendation features and the social aspect of listening — since users were most interested in knowing what their friends and family were listening to.</p>
+          <p>We also added a voice-commentary feature, in which users could comment on favorite audiobooks using audio instead of text — fitting the commuter use case where typing is inconvenient.</p>
+        </div>
+        <img class="cs-content-img" src="../past_uploads/prioritizationmatrixaudiobookclub.png" alt="Prioritization matrix for audiobook club features">
+      </section>
+
+      <section class="cs-section" aria-labelledby="cs-features">
+        <h2 class="cs-section-heading" id="cs-features">Prototype Features</h2>
+        <div class="cs-showcase-list">
+          <div class="cs-showcase-item">
+            <img class="cs-showcase-img" src="../past_uploads/audiobookclubrecommendations.gif" alt="Audiobook recommendations feature demo">
+            <div>
+              <p class="cs-showcase-title">Audiobook Recommendations</p>
+              <p class="cs-showcase-desc">View audiobook recommendations based upon audiobooks you have previously listened to or liked.</p>
+            </div>
+          </div>
+          <div class="cs-showcase-item">
+            <img class="cs-showcase-img" src="../past_uploads/audiobookclubcollections.gif" alt="Audiobook collections feature demo">
+            <div>
+              <p class="cs-showcase-title">Audiobook Collections</p>
+              <p class="cs-showcase-desc">Sort your audiobooks into collections and filter by recent, genre, or completed.</p>
+            </div>
+          </div>
+          <div class="cs-showcase-item">
+            <img class="cs-showcase-img" src="../past_uploads/audiobookclubpeopleyoumightlike.gif" alt="People you may like feature demo">
+            <div>
+              <p class="cs-showcase-title">People You May Like</p>
+              <p class="cs-showcase-desc">Make new audiobook friends and follow people based upon what you have listened to. Challenge yourself to listen to more audiobooks by finding your place on the reading leaderboard.</p>
+            </div>
+          </div>
+          <div class="cs-showcase-item">
+            <img class="cs-showcase-img" src="../past_uploads/audiobookclubprofile.png" alt="Profile feature screenshot">
+            <div>
+              <p class="cs-showcase-title">Profile</p>
+              <p class="cs-showcase-desc">View the profiles of yourself or your friends, listen to their audiobook commentary, and see what they are currently reading.</p>
+            </div>
+          </div>
+          <div class="cs-showcase-item">
+            <img class="cs-showcase-img" src="../past_uploads/audiobookclubchangingspeed.gif" alt="Change audiobook speed feature demo">
+            <div>
+              <p class="cs-showcase-title">Change Audiobook Speed</p>
+              <p class="cs-showcase-desc">Change audiobook speed and leave your audiobook playing in the background while you focus on other tasks.</p>
+            </div>
+          </div>
+          <div class="cs-showcase-item">
+            <img class="cs-showcase-img" src="../past_uploads/audiobookclubmesage4.png" alt="Send messages feature screenshot">
+            <div>
+              <p class="cs-showcase-title">Send Messages</p>
+              <p class="cs-showcase-desc">Send messages to friends via text or audio, and share audiobook recommendations.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cs-section" aria-labelledby="cs-outcomes">
+        <h2 class="cs-section-heading" id="cs-outcomes">Outcomes &amp; Results</h2>
+        <div class="cs-section-body">
+          <p>We had to change the direction of our HMW statement — the original prompt involved deciphering findings based upon notes, but 81.8% of the readers did not take notes at all while listening to audiobooks. Our final app prototype was informed entirely by these findings.</p>
+          <p>Bias was a concern: the majority of our survey responses were facilitated through a single Facebook group. Next time we would use rationed sampling, with recruitment across all sorts of age-ranges and social media groups to prevent this.</p>
+        </div>
+      </section>
+
+      <section class="cs-section" aria-labelledby="cs-next-steps">
+        <h2 class="cs-section-heading" id="cs-next-steps">Further Steps &amp; Improvements</h2>
+        <div class="cs-section-body">
+          <p>Would like to expand the target audience towards those with disabilities — interviewing a blind person changed my perspective on how much audiobooks help individuals with ADHD, dyslexia, and blindness.</p>
+          <p>Better sample planning is needed in future: Reddit interviewees tended to be men in their 30s–40s, while Facebook listeners tended to be women in their 50s — demographic variety matters for a product meant to be inclusive.</p>
+          <p>Terminology standardization is also an open question, since "audiobook listener" vs "audiobook viewer" reflects deeper uncertainty about how the field defines its users.</p>
+        </div>
+      </section>
+
+    </div>
+
+  </main>
+
+  <script src="../main.js"></script>
+</body>
+</html>

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mind-A-Log — Sabine Kwan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    .cs-process-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      padding-top: 8px;
+    }
+    .cs-process-card {
+      background: rgba(0, 0, 0, 0.05);
+      border-radius: 16px;
+      padding: 40px 32px;
+      text-align: center;
+    }
+    .cs-process-card-icon {
+      width: 70px;
+      height: auto;
+      margin: 0 auto 20px;
+      display: block;
+    }
+    .cs-process-card-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: #000634;
+      margin-bottom: 12px;
+      line-height: 1.2;
+    }
+    .cs-process-card-body {
+      font-size: 16px;
+      color: rgba(0, 6, 52, 0.7);
+      line-height: 1.5;
+    }
+    .cs-showcase-list {
+      display: flex;
+      flex-direction: column;
+      gap: 64px;
+      padding-top: 16px;
+    }
+    .cs-showcase-item {
+      display: flex;
+      align-items: center;
+      gap: 64px;
+    }
+    .cs-showcase-item:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+    .cs-showcase-img {
+      width: 280px;
+      flex-shrink: 0;
+      border-radius: 16px;
+      display: block;
+    }
+    .cs-showcase-title {
+      font-size: 24px;
+      font-weight: 700;
+      color: #000634;
+      margin-bottom: 12px;
+    }
+    .cs-showcase-desc {
+      font-size: 18px;
+      color: rgba(0, 6, 52, 0.7);
+      line-height: 1.5;
+    }
+    .cs-content-img {
+      width: 100%;
+      border-radius: 12px;
+      display: block;
+      margin-top: 32px;
+    }
+    @media (max-width: 767px) {
+      .cs-process-cards { grid-template-columns: 1fr; }
+      .cs-showcase-item,
+      .cs-showcase-item:nth-child(even) { flex-direction: column; }
+      .cs-showcase-img { width: 100%; max-width: 280px; margin: 0 auto; }
+    }
+  </style>
+</head>
+<body>
+
+  <main id="main-content">
+
+    <section class="cs-hero" aria-labelledby="cs-title">
+      <a href="../index.html" class="cs-back-link">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+        Work
+      </a>
+      <h1 class="cs-title" id="cs-title">Mind-A-Log: Assisting Troubled Youth with Anxiety and Depression</h1>
+    </section>
+
+    <section class="cs-feature" aria-label="Mind-A-Log app overview">
+      <div class="cs-feature-img">
+        <img src="../past_uploads/malportfolioheader.png" alt="Mind-A-Log app screens overview">
+      </div>
+    </section>
+
+    <section class="cs-meta" aria-label="Case study details">
+      <div class="cs-meta-inner">
+        <div class="cs-meta-item">
+          <h2 class="cs-meta-label">Role</h2>
+          <div class="cs-meta-value">
+            <p>UX Researcher</p>
+            <p>Project Manager</p>
+            <p>Brainwriting Moderator</p>
+          </div>
+        </div>
+        <div class="cs-meta-item">
+          <h2 class="cs-meta-label">Timeline</h2>
+          <p class="cs-meta-value">1.5 Days</p>
+        </div>
+        <div class="cs-meta-item">
+          <h2 class="cs-meta-label">Team</h2>
+          <div class="cs-meta-value">
+            <p>Sabine Kwan — UX Researcher, Project Manager, Brainwriting Moderator</p>
+            <p>Prabal Gupta — UI/UX Designer &amp; Researcher</p>
+            <p>Tanya Das — UI/UX Designer</p>
+            <p>Antonella — Floater &amp; Wireframing</p>
+          </div>
+        </div>
+        <div class="cs-meta-item">
+          <h2 class="cs-meta-label">Skills</h2>
+          <div class="cs-meta-value">
+            <p>Competitive Analysis</p>
+            <p>Project Management</p>
+            <p>Brainwriting Facilitation</p>
+            <p>Customer Journey Mapping</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="cs-content">
+
+      <section class="cs-section" aria-labelledby="cs-process">
+        <h2 class="cs-section-heading" id="cs-process">Process</h2>
+        <div class="cs-process-cards">
+          <div class="cs-process-card">
+            <img class="cs-process-card-icon" src="../past_uploads/brainstormicon.png" alt="">
+            <p class="cs-process-card-title">Brainstorming &amp; Competitive Analysis</p>
+            <p class="cs-process-card-body">Brainstorming potential ideas we were passionate about using brainwriting, and determining our unique selling point by researching competitors.</p>
+          </div>
+          <div class="cs-process-card">
+            <img class="cs-process-card-icon" src="../past_uploads/nounpersona4144930.png" alt="">
+            <p class="cs-process-card-title">Customer Persona Crafting</p>
+            <p class="cs-process-card-body">Crafting out our persona and identifying Matthew's pain points and customer journey.</p>
+          </div>
+          <div class="cs-process-card">
+            <img class="cs-process-card-icon" src="../past_uploads/prototypingfillin.png" alt="">
+            <p class="cs-process-card-title">Prototype Creation</p>
+            <p class="cs-process-card-body">Used our brainstormed concepts and persona in order to define features and create the app.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="cs-section" aria-labelledby="cs-overview">
+        <h2 class="cs-section-heading" id="cs-overview">Overview</h2>
+        <div class="cs-section-body">
+          <p>Each year, youths from the ages of 18–24 are at most risk for anxiety and depression. 1-in-3 adolescents (31.9%) will meet criteria for an anxiety disorder by the age of 18.</p>
+          <p>Youths need a support system that will help guide them through their anxiety and depression. Mind-A-Log was designed to provide that support through mood tracking, accountability systems, and access to professional resources.</p>
+        </div>
+        <img class="cs-content-img" src="../past_uploads/3811637.jpg" alt="Youth mental health research overview">
+      </section>
+
+      <section class="cs-section" aria-labelledby="cs-problem">
+        <h2 class="cs-section-heading" id="cs-problem">Problem Statement</h2>
+        <div class="cs-section-body">
+          <p><strong>How might we make it easier for youths to manage their anxiety and depression?</strong></p>
+        </div>
+      </section>
+
+      <section class="cs-section" aria-labelledby="cs-persona">
+        <h2 class="cs-section-heading" id="cs-persona">Meet Matthew</h2>
+        <div class="cs-section-body">
+          <p>Matthew is a 20 year old college student who has to juggle school, an internship, and a part-time job. They are stressed and anxious and are looking for a solution to help better their life. One day, Matthew's counsellor introduces them to Mind-a-Log.</p>
+        </div>
+        <img class="cs-content-img" src="../past_uploads/matthew.png" alt="User persona: Matthew">
+        <img class="cs-content-img" src="../past_uploads/mindalogmainscreen.png" alt="Mind-A-Log main screen">
+        <img class="cs-content-img" src="../past_uploads/mal3screens.png" alt="Mind-A-Log three main feature screens">
+      </section>
+
+      <section class="cs-section" aria-labelledby="cs-features">
+        <h2 class="cs-section-heading" id="cs-features">Prototype Features</h2>
+        <div class="cs-showcase-list">
+          <div class="cs-showcase-item">
+            <img class="cs-showcase-img" src="../past_uploads/malmoodtracker.gif" alt="Journaling and mood tracking feature demo">
+            <div>
+              <p class="cs-showcase-title">Journaling &amp; Mood Tracking</p>
+              <p class="cs-showcase-desc">All 3 user interviewees said they struggled most with routine. Includes mood-tracking and various inputs that allow Matthew to recognize harmful thought patterns, establish order through journaling, see mood progress over time, and uplift his mood.</p>
+            </div>
+          </div>
+          <div class="cs-showcase-item">
+            <img class="cs-showcase-img" src="../past_uploads/malbuddies.gif" alt="Accountability buddies feature demo">
+            <div>
+              <p class="cs-showcase-title">Accountability Buddies</p>
+              <p class="cs-showcase-desc">All users interviewed during the pandemic mentioned that isolation made them feel more distracted and anxious. Having social support helped decrease anxiety. Features: SOS button, adding an accountability buddy, and chat features.</p>
+            </div>
+          </div>
+          <div class="cs-showcase-item">
+            <img class="cs-showcase-img" src="../past_uploads/psychologistsarticlesmal.png" alt="Consult a psychologist feature screenshot">
+            <div>
+              <p class="cs-showcase-title">Consult a Psychologist</p>
+              <p class="cs-showcase-desc">A counselor interviewed said that in cases of severe depression, psychological help is needed. All users didn't know what to do when they had anxiety or depression due to a lack of resources. Features include: viewing psychologists, booking appointments, and asking questions via chat.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cs-section" aria-labelledby="cs-resolution">
+        <h2 class="cs-section-heading" id="cs-resolution">Summary &amp; Resolution of Pain Points</h2>
+        <div class="cs-section-body">
+          <p>Mind-A-Log addresses Matthew's pain points by:</p>
+          <ol class="cs-outcomes-list">
+            <li>Uplifting Matthew's mood by establishing routine through journaling &amp; mood tracking</li>
+            <li>Creating an accountability &amp; support system so Matthew is not alone in his struggles</li>
+            <li>Giving Matthew the appropriate resources when needed, via a psychologist directory and self-help articles</li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="cs-section" aria-labelledby="cs-step1">
+        <h2 class="cs-section-heading" id="cs-step1">Step 1: Brainstorming &amp; Competitive Analysis</h2>
+        <div class="cs-section-body">
+          <p>To determine which topics our group was most passionate about, we used brainwriting — one person writes an idea, and another elaborates on it. This led us to the concept of mental health as our main topic.</p>
+          <p>We also researched competitors to determine what apps existed in the mental health space. Although there were many apps targeted towards teenagers and adults, there were barely any targeted specifically towards youth — so we steered the app in that direction.</p>
+        </div>
+        <img class="cs-content-img" src="../past_uploads/malbrainwriting.png" alt="Brainwriting session output for Mind-A-Log">
+        <img class="cs-content-img" src="../past_uploads/malcompetitiveanalysis.png" alt="Competitive analysis for mental health apps">
+      </section>
+
+      <section class="cs-section" aria-labelledby="cs-step2">
+        <h2 class="cs-section-heading" id="cs-step2">Step 2: Customer Persona Crafting</h2>
+        <div class="cs-section-body">
+          <p>Once we decided upon our in-app features, we crafted our persona. At first we considered both a user and psychologist persona, but after deliberation decided to focus on the user persona first, as the psychologist would require a separate interface.</p>
+          <p>We also created a customer journey for Matthew, which helped identify a key insight: we should not target the app towards those with major anxiety/depression, as that would be beyond our scope. Instead, users are more likely to discover the app through a mental health professional who can assess whether the user's condition is mild or major. This shaped our feature decisions — the "consult a psychologist" option was added specifically because the app targets only mild cases.</p>
+        </div>
+        <img class="cs-content-img" src="../past_uploads/malpersonacreation.png" alt="Persona creation documentation for Mind-A-Log">
+        <img class="cs-content-img" src="../past_uploads/malcustomerjourneymapping.jpg" alt="Customer journey map for Mind-A-Log">
+      </section>
+
+      <section class="cs-section" aria-labelledby="cs-step3">
+        <h2 class="cs-section-heading" id="cs-step3">Step 3: Prototyping</h2>
+        <div class="cs-section-body">
+          <p>After deciding upon our user persona, we created a user flow and task flow for our prototype, which led to the final creation of the app accordingly.</p>
+        </div>
+        <img class="cs-content-img" src="../past_uploads/maluserflow.jpg" alt="User flow for Mind-A-Log prototype">
+        <img class="cs-content-img" src="../past_uploads/maltaskflow.jpg" alt="Task flow for Mind-A-Log prototype">
+        <img class="cs-content-img" src="../past_uploads/malfinalprototypescreen.png" alt="Final prototype screens for Mind-A-Log">
+      </section>
+
+      <section class="cs-section" aria-labelledby="cs-outcomes">
+        <h2 class="cs-section-heading" id="cs-outcomes">Outcomes &amp; Results</h2>
+        <div class="cs-section-body">
+          <p>Overall, we managed to complete the project on time. Presentation took longer than expected — this taught me not to underestimate documenting and organizing findings in advance.</p>
+          <p>The project made me determined to learn Figma more deeply. I was strong in the creative process and directing the team, but struggled with execution due to limited Figma experience at the time.</p>
+          <p>The Accountability Buddy feature generated the most team discussion — particularly around notifications. We decided users would only be notified when their accountability buddy sent them a message, with no other unsolicited notifications beyond self-prescribed journaling reminders.</p>
+          <p>Style tiles should have been elaborated on before starting the design process, to establish consistent branding before making changes became costly.</p>
+        </div>
+      </section>
+
+    </div>
+
+  </main>
+
+  <script src="../main.js"></script>
+</body>
+</html>
