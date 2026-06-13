@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Streamlining Member Verification: Automating Loyalty Rewards for Race Organizers</title>
+  <meta name="description" content="How I automated membership validation for race event organizers, eliminating 80+ hours of manual credential checking per event.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://sabinekwan.com/streamlining-member-verification.html">
+  <meta property="og:title" content="Streamlining Member Verification: Automating Loyalty Rewards for Race Organizers — Sabine Kwan">
+  <meta property="og:description" content="How I automated membership validation for race event organizers, eliminating 80+ hours of manual credential checking per event.">
+  <meta property="og:image" content="casestudy3_assets/Case_study_3_hero.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Streamlining Member Verification: Automating Loyalty Rewards for Race Organizers — Sabine Kwan">
+  <meta name="twitter:description" content="How I automated membership validation for race event organizers, eliminating 80+ hours of manual credential checking per event.">
+  <meta name="twitter:image" content="casestudy3_assets/Case_study_3_hero.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <main id="main-content">
+
+    <!-- ===== Hero ===== -->
+    <section class="cs-hero" aria-labelledby="cs-title">
+      <a href="index.html" class="cs-back-link">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+        Work
+      </a>
+      <h1 class="cs-title" id="cs-title">Streamlining Member Verification: Automating Loyalty Rewards for Race Organizers</h1>
+    </section>
+
+    <!-- ===== Feature video ===== -->
+    <section class="cs-feature" aria-label="Feature demonstration">
+      <div class="cs-feature-img">
+        <video
+          src="casestudy3assets/Upload Flow_Validation List.mp4"
+          autoplay
+          loop
+          muted
+          playsinline
+          aria-label="Animated walkthrough of the member verification and validation list interface."
+        ></video>
+      </div>
+    </section>
+
+    <!-- ===== Meta info ===== -->
+    <section class="cs-meta" aria-label="Case study details">
+      <div class="cs-meta-inner">
+        <div class="cs-meta-item">
+          <h2 class="cs-meta-label">Role</h2>
+          <p class="cs-meta-value">Lead Product Designer</p>
+        </div>
+        <div class="cs-meta-item">
+          <h2 class="cs-meta-label">Timeline</h2>
+          <p class="cs-meta-value">3 Months | 2–3 Week Design Sprint</p>
+        </div>
+        <div class="cs-meta-item">
+          <h2 class="cs-meta-label">Team</h2>
+          <div class="cs-meta-value">
+            <p>1 Product Designer</p>
+            <p>1 Product Manager</p>
+            <p>1 Frontend Developer</p>
+            <p>Multiple Backend Developers</p>
+          </div>
+        </div>
+        <div class="cs-meta-item">
+          <h2 class="cs-meta-label">Skills</h2>
+          <div class="cs-meta-value">
+            <p>Low-Fidelity Design</p>
+            <p>High-Fidelity Design</p>
+            <p>Stakeholder Management</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Content body ===== -->
+    <div class="cs-content">
+
+      <!-- Section 1: High-Level Impact -->
+      <section class="cs-section" aria-labelledby="cs-impact">
+        <h2 class="cs-section-heading" id="cs-impact">High-Level Impact</h2>
+        <div class="cs-section-body">
+          <p><strong>Eliminated Manual Overhead:</strong> Replaced a process requiring 80+ hours of post-registration validation work per event with an automated system, freeing organizers from labour-intensive credential cross-referencing.</p>
+          <p><strong>Closed a Critical Feature Gap:</strong> Delivered functionality competitors had already begun shipping, restoring product parity and positioning Race Roster as a viable platform for membership-aware event management.</p>
+          <p><strong>Scalable for All Organizer Tiers:</strong> Designed an upload-and-map validation flow that works seamlessly for small boutique races and large-scale events alike, without requiring manual intervention after setup.</p>
+        </div>
+      </section>
+
+      <!-- Section 2: The Problem -->
+      <section class="cs-section" aria-labelledby="cs-problem">
+        <h2 class="cs-section-heading" id="cs-problem">The Problem</h2>
+        <div class="cs-section-body">
+          <p>Event organizers wanted to extend perks—discounts, free products, exclusive access—to participants holding valid running club or membership credentials. Without a native solution, they resorted to a costly workaround: letting registrants add a perk to their cart, then manually cross-referencing every purchase against a membership list after registration closed. At scale, this consumed 80+ hours per event—a burden that medium and large organizers simply could not sustain, and that smaller teams could not afford to repeat.</p>
+        </div>
+      </section>
+
+      <!-- Section 3: Understanding the Audience -->
+      <section class="cs-section" aria-labelledby="cs-audience">
+        <h2 class="cs-section-heading" id="cs-audience">Understanding the Audience: A Tiered Painpoint Matrix</h2>
+        <div class="cs-section-body">
+          <div class="cs-audience-table" role="region" aria-label="User segment painpoint matrix. Scroll horizontally to see all columns." tabindex="0">
+          <table aria-label="User segment painpoint matrix">
+            <thead>
+              <tr>
+                <th scope="col" style="text-align:left;padding:12px 16px;border-bottom:2px solid #e0e0e0;font-weight:600;">User Segment</th>
+                <th scope="col" style="text-align:left;padding:12px 16px;border-bottom:2px solid #e0e0e0;font-weight:600;">Primary Painpoint</th>
+                <th scope="col" style="text-align:left;padding:12px 16px;border-bottom:2px solid #e0e0e0;font-weight:600;">Strategic Requirement</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="User Segment" style="padding:12px 16px;border-bottom:1px solid #e0e0e0;vertical-align:top;">Small Event Organizers (1–5 people)</td>
+                <td data-label="Primary Painpoint" style="padding:12px 16px;border-bottom:1px solid #e0e0e0;vertical-align:top;">Any manual post-registration task consumes a disproportionate share of limited staff capacity.</td>
+                <td data-label="Strategic Requirement" style="padding:12px 16px;border-bottom:1px solid #e0e0e0;vertical-align:top;">A simple upload-and-confirm flow requiring minimal technical knowledge to configure.</td>
+              </tr>
+              <tr>
+                <td data-label="User Segment" style="padding:12px 16px;border-bottom:1px solid #e0e0e0;vertical-align:top;">Medium Event Organizers</td>
+                <td data-label="Primary Painpoint" style="padding:12px 16px;border-bottom:1px solid #e0e0e0;vertical-align:top;">High participant volume but constrained operations; cannot sustain 80+ hours of manual validation per event.</td>
+                <td data-label="Strategic Requirement" style="padding:12px 16px;border-bottom:1px solid #e0e0e0;vertical-align:top;">Automated matching logic that runs without intervention once the validation list is uploaded.</td>
+              </tr>
+              <tr>
+                <td data-label="User Segment" style="padding:12px 16px;border-bottom:1px solid #e0e0e0;vertical-align:top;">Large / Elite Event Organizers</td>
+                <td data-label="Primary Painpoint" style="padding:12px 16px;border-bottom:1px solid #e0e0e0;vertical-align:top;">Managing thousands of registrants across multiple membership tiers; the existing workaround was not viable at this scale.</td>
+                <td data-label="Strategic Requirement" style="padding:12px 16px;border-bottom:1px solid #e0e0e0;vertical-align:top;">Robust column-mapping and error-handling to process large validation lists reliably and without data loss.</td>
+              </tr>
+            </tbody>
+          </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4: Design Logic -->
+      <section class="cs-section" aria-labelledby="cs-design-logic">
+        <h2 class="cs-section-heading" id="cs-design-logic">Design Logic: Narrowing Scope to Ship with Confidence</h2>
+        <div class="cs-section-body">
+          <p>With a 2–3 week sprint and a mid-project PM handover, the priority was scope clarity over comprehensiveness. Rather than designing for every conceivable membership scenario, I worked with the PM to constrain the validation framework to three universally applicable identifiers: <strong>First Name</strong>, <strong>Date of Birth</strong>, and a unique <strong>Membership Identifier</strong>. This kept organizer-facing configuration simple and reduced the error-state surface area significantly.</p>
+          <p><strong>Component Reuse for Speed:</strong> I audited existing upload and column-mapping components across the platform, evaluating each for error frequency and UX consistency. The Organizational-level uploader was the strongest candidate—fewest known errors, most stable mapping behaviour—so the feature was anchored there, with one outstanding error resolved in parallel to unblock launch.</p>
+          <p><strong>Flow Architecture:</strong> I organized the high-fidelity designs into discrete functional flows—Benefits configuration, upload and column mapping, and the reimport flow—making the eventual handover to Frontend and Backend clear enough to walk through and sign off in a single session.</p>
+        </div>
+      </section>
+
+    </div><!-- /.cs-content -->
+
+    <!-- Before/After comparison image block -->
+    <div class="cs-image-block" role="region" aria-label="Before and after design comparison">
+      <img class="cs-image-desktop" src="casestudy3assets/Before_After_Graphic.png" alt="Before and after comparison showing the transformation from manual credential checking to automated member verification">
+      <div class="cs-image-mobile">
+        <img src="casestudy3assets/Before_After_Graphic (mobile).png" alt="Before and after comparison showing the transformation from manual credential checking to automated member verification">
+      </div>
+    </div>
+
+    <div class="cs-content">
+
+      <!-- Section 5: The Solution -->
+      <section class="cs-section" aria-labelledby="cs-solution">
+        <h2 class="cs-section-heading" id="cs-solution">The Solution: A Self-Serve Validation Engine</h2>
+        <div class="cs-section-body">
+          <div class="cs-process-list">
+            <div class="cs-process-item">
+              <p class="cs-process-title"><strong>1. Validation List Upload:</strong></p>
+              <p class="cs-process-body-text">Organizers upload a CSV containing participant credentials mapped to three core identifiers—First Name, Date of Birth, and Membership Number—covering the most common real-world membership structures without overcomplicating configuration.</p>
+            </div>
+            <div class="cs-process-item">
+              <p class="cs-process-title"><strong>2. Intelligent Column Mapping:</strong></p>
+              <p class="cs-process-body-text">A mapping interface lets organizers align their file's columns to the platform's expected fields, accommodating the variation in how different running organizations export their member data.</p>
+            </div>
+            <div class="cs-process-item">
+              <p class="cs-process-title"><strong>3. Automated Eligibility Matching:</strong></p>
+              <p class="cs-process-body-text">At the point of registration, the system cross-references the registrant's submitted details against the uploaded list in real time, automatically applying the designated perk—discount, free product, or access tier—if a match is confirmed.</p>
+            </div>
+            <div class="cs-benefit-video" role="img" aria-label="Animated walkthrough of the benefit configuration flow for race organizers.">
+              <video
+                src="casestudy3assets/Benefit Flow.mp4"
+                autoplay
+                loop
+                muted
+                playsinline
+                aria-hidden="true"
+              ></video>
+            </div>
+            <div class="cs-process-item">
+              <p class="cs-process-title"><strong>4. Reimport Flow:</strong></p>
+              <p class="cs-process-body-text">An updated validation list can be uploaded at any point before registration closes, ensuring organizers can refresh their membership data without disrupting active registrations.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 6: Reflection & Lessons Learned -->
+      <section class="cs-section" aria-labelledby="cs-reflection">
+        <h2 class="cs-section-heading" id="cs-reflection">Reflection &amp; Lessons Learned</h2>
+        <div class="cs-section-body">
+          <ol class="cs-outcomes-list">
+            <li><strong>Technical Conversations as a Design Tool:</strong> Direct sessions with Backend developers were unexpectedly valuable for mapping out UX logic. Understanding how validation matching worked at a data level allowed me to design flows that were not just visually coherent but technically accurate—reducing the likelihood of edge cases surfacing post-launch.</li>
+            <li><strong>Scope Discipline as a Feature:</strong> Constraining validation to three identifiers was initially a pragmatic response to timeline pressure. In retrospect, it was also the right design decision—it kept organizer-facing configuration simple, reduced error states, and made the feature shippable without sacrificing the core use case. Constraints, when chosen deliberately, become design assets.</li>
+          </ol>
+        </div>
+      </section>
+
+    </div><!-- /.cs-content -->
+
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html>

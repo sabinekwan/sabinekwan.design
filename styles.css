@@ -528,17 +528,11 @@ button { font-family: inherit; }
 }
 
 
-/* ── Coming-soon cards: visually dimmed, non-interactive ── */
-
-.card-streamlining {
-  opacity: 0.55;
-  cursor: default;
-}
-
 /* ── Case study card hover state ── */
 
 .card-case-study,
-.card-cs2 {
+.card-cs2,
+.card-streamlining {
   position: relative;
   cursor: pointer;
 }
@@ -559,7 +553,9 @@ button { font-family: inherit; }
 .card-case-study:hover .card-hover-overlay,
 .card-case-study:focus-within .card-hover-overlay,
 .card-cs2:hover .card-hover-overlay,
-.card-cs2:focus-within .card-hover-overlay {
+.card-cs2:focus-within .card-hover-overlay,
+.card-streamlining:hover .card-hover-overlay,
+.card-streamlining:focus-within .card-hover-overlay {
   opacity: 1;
   pointer-events: auto;
 }
@@ -755,6 +751,20 @@ button { font-family: inherit; }
   color: rgba(0, 6, 52, 0.7);
   text-align: center;
   padding-top: 1.5rem;
+}
+
+.cs-audience-table {
+  overflow-x: auto;
+}
+
+.cs-benefit-video {
+  margin: 1.5rem 0;
+}
+
+.cs-benefit-video video {
+  width: 100%;
+  border-radius: 16px;
+  display: block;
 }
 
 .cs-process-list {
@@ -1126,6 +1136,60 @@ button { font-family: inherit; }
   .cta-buttons {
     flex-direction: column;
     align-items: center;
+  }
+
+  /* Audience table: card layout on mobile */
+  .cs-audience-table { overflow-x: visible; }
+  .cs-audience-table table { display: block; }
+  .cs-audience-table thead { display: none; }
+  .cs-audience-table tbody { display: block; }
+  .cs-audience-table tr {
+    display: block;
+    margin-bottom: 16px;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 16px 16px 20px;
+  }
+  .cs-audience-table td {
+    display: block;
+    font-size: 24px;
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f0f0;
+    text-align: left;
+    vertical-align: top;
+  }
+  .cs-audience-table td:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  .cs-audience-table td::before {
+    content: attr(data-label);
+    display: block;
+    font-weight: 600;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: rgba(0, 6, 52, 0.5);
+    margin-bottom: 4px;
+  }
+  /* User Segment acts as the card title — no label, bolder */
+  .cs-audience-table td:first-child {
+    font-size: 24px;
+    font-weight: 700;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 12px;
+  }
+  .cs-audience-table td:first-child::before {
+    display: none;
+  }
+
+  /* Benefit Flow video: full-bleed on mobile for prominence */
+  .cs-benefit-video {
+    margin-left: -44px;
+    margin-right: -44px;
+  }
+  .cs-benefit-video video {
+    border-radius: 0;
   }
 
 }
